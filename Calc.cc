@@ -9,6 +9,16 @@ Fraction Fraction::maximize() const {
     return Fraction(0, newNum, den);
 }
 
+/**
+ * With the + and - operators, I have to fix the simplification process.
+ * EDIT: with the + and - operators, it works now, but I don't like how
+ *       the algorithm for it.
+ * TODO: Fix the simplification
+ * 
+ * The state I have it at right now is unapologetic,
+ * will take a crack at thinking of more ways to improve
+ */
+
 Fraction Fraction::simplify(int num, int den) const {
     bool isNeg = false;
     if(num < 0){
@@ -61,14 +71,6 @@ Fraction Fraction::operator*(const Fraction& other){
 
     return output; 
 }
-
-/**
- * With the + and - operators, I have to fix the simplification process.
- * TODO: Fix the simplification
- * 
- * The state I have it at right now is unapologetic,
- * will take a crack at thinking of more ways to improve
- */
 
 Fraction Fraction::operator+(const Fraction& other){
     int n = (num * other.den) + (other.num * den);
