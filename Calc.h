@@ -29,8 +29,12 @@ public:
      *          Will be used to convert the factor of
      *          the fraction to be part of the numerator
      *      reduce:
-     *          Will be used to reduce the fraction to
-     *          have a whole number if possible  
+     *          Will be used to transmute the fraction to
+     *          have a whole number if possible 
+     *      simplify: 
+     *          Will transmute the fraction to be a simpler form.
+     *          It's a private function because it will not be needed
+     *          anywhere else, the overloaded operators will use the function
      */
     
     Fraction maximize() const;
@@ -63,6 +67,7 @@ public:
     bool operator<=(const Fraction& );
 private:
     int num, den, fac = 0;
+    
     Fraction simplify(int , int ) const ;
 };
 
