@@ -1,0 +1,1 @@
+This is a very bare bones fraction calculator. I'm not too happy with the simplification, so I'm going to work more on that
